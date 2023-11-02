@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>image</title>
+    <style>
+        ul{
+
+        }
+    </style>
+</head>
+<body>
+<h1>my image list</h1>
+<ul>
+    {% for image in images %}
+        <li>
+        <h2>{{ image.title }}</h2>
+            <img src="{{ image.image.url }}" alt="{{ image.title }}">
+
+        </li>
+
+    {% endfor %}
+</ul>
+
+    <a href="{% url 'image_list' %}">image list</a>
+
+</body>
+</html>
